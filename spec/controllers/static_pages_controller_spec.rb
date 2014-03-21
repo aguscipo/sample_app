@@ -1,12 +1,12 @@
-require 'spec_helper'
+equire 'spec_helper'
 
-describe StaticPagesController do
+describe "Static pages" do
 
-  describe "GET '...'" do
-    it "returns http success" do
-      get '...'
-      response.should be_success
+  describe "Home page" do
+
+    it "should have the content 'Sample App'" do
+      visit '/static_pages/home'
+      expect(page).to have_content('Sample App')
     end
   end
-
 end
